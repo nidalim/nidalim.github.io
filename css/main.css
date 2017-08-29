@@ -198,13 +198,10 @@ a{
 }
 
 #logo{
-    margin-bottom: -10px;
     padding-bottom: 0px;
-    background: url(../images/logo.svg);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 145px;
-    margin-left: 15px;
+    font-size: 2em;
+    color: black;
+    font-family: montserrat-black;
 }
 
 .deviantart{
