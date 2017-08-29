@@ -86,7 +86,7 @@ html{
 }
 
 body {
-    font: 100%/1.5 "Gotham", "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+    font: 100%/1.5 "Montserrat", "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
     background: #ffffff;
     color: #000000;
     text-align: center;
@@ -169,7 +169,7 @@ input[type="submit"] {
 #footer {
     background: #ffffff;
     text-align: left;
-    padding: 0px 30px 30px 30px;
+    padding: 0px 20px 30px 30px;
 }
 
 input.text {
