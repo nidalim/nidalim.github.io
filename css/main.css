@@ -199,10 +199,18 @@ a{
 
 #logo{
     padding-bottom: 0px;
+    margin-bottom: -10px;
     font-size: 2em;
+    background-color: transparent;
     color: black;
+    image-rendering: -webkit-optimize-contrast;
     font-family: montserrat;
     font-weight: bold;
+    background-image: url(../images/logo.jpg);
+    background-size: 147px;
+    background-position: left;
+    margin-left: 15px;
+    background-repeat: no-repeat;
 }
 
 .deviantart{
