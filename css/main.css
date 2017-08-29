@@ -198,7 +198,7 @@ a{
 }
 
 #logo{
-    padding-bottom: 0px;
+    margin-bottom: -10px;
     padding-bottom: 0px;
     background: url(../images/logo.svg);
     background-repeat: no-repeat;
