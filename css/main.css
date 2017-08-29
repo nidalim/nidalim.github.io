@@ -201,7 +201,8 @@ a{
     padding-bottom: 0px;
     font-size: 2em;
     color: black;
-    font-family: montserrat-black;
+    font-family: montserrat;
+    font-weight: bold;
 }
 
 .deviantart{
