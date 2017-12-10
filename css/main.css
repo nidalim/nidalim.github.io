@@ -237,6 +237,18 @@ a{
     border-radius: 5px;
 }
 
+.behance{
+    color: rgba(255, 255, 255, 0) !important;
+    background-color: #000000;
+    background-image: url(../images/behance.svg);
+    background-size: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
 .all{
     text-align: left;
     background: #fff9eb !important;
