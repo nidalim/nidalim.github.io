@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/prevod.js" type="text/javascript">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+    @import url("css/style.css")
+    </style>
+    <script src='js/autoresize.jquery.min.js'></script>
+</head>
+
+<body>
+    <button onclick="document.getElementById('prevod').value = prevedi_u_cir(zameni_u_cir(document.getElementById('prevod').value))">Prevedi u cirilicu</button>
+    <button onclick="document.getElementById('prevod').value = prevedi_u_lat(zameni_u_lat(document.getElementById('prevod').value))">Prevedi u cirilicu</button>
+    <textarea rows="20" cols="200" style="width:100%;" id="prevod">
+    </textarea>
+    <script>
+    $(document).ready(function() {
+        $('#prevod').autoResize();
+    });
+    </script>
+</body>
+
+</html>
