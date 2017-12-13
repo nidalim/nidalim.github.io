@@ -241,7 +241,7 @@ a{
     color: rgba(255, 255, 255, 0) !important;
     background-color: #000000;
     background-image: url(../images/behance.svg);
-    background-size: 90px;
+    background-size: 100px;
     background-repeat: no-repeat;
     background-position: center;
     padding: 10px;
@@ -267,6 +267,45 @@ a{
 .recentwork{
     text-align: left;
     background: #f530ff !important;
+}
+
+#tab:hover > a{
+    color: white;
+}
+
+#tab:hover{
+    background:black !important;
+    color: white !important;
+}
+
+.btn:hover > a{
+    color: white;
+}
+
+.btn:hover{
+    background:black !important;
+    color: white !important;
+}
+
+#tab{
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition:all 0.2s ease;
+}
+
+.btn{
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition:all 0.2s ease;
+}
+
+a{
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    -o-transition:all 0.2s ease;
+    transition:all 0.2s ease;
 }
 /* Tables
 -----------------------------------------------------------------------------*/
