@@ -198,17 +198,17 @@ a{
 }
 
 #logo{
-    padding: 50px;
-    margin-bottom: -10px;
-    font-size: 2em;
-    background-color: transparent;
-    color: black;
-    image-rendering: -webkit-optimize-contrast;
     font-family: montserrat;
-    font-weight: bold;
-    background-image: url(../images/logo.svg);
-    background-position: left;
+    color: #ffffff !important;
+    background: #000000;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/logo.jpg);
 }
 
 .deviantart{
@@ -266,17 +266,17 @@ a{
 
 .books{
     text-align: left;
-    background: #ffb300 !important;
+    background: #616161 !important;
 }
 
 .socialnetworks{
     text-align: left;
-    background: #2ab4ff !important;
+    background: #8e8e8e !important;
 }
 
 .recentwork{
     text-align: left;
-    background: #f530ff !important;
+    background: #c3c3c3 !important;
 }
 
 #tab:hover > a{
