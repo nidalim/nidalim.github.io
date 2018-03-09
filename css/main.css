@@ -204,11 +204,9 @@ a{
     text-align: center;
     border-radius: 5px;
     padding: 10px;
-
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../images/logo.jpg);
 }
 
 .deviantart{
@@ -266,17 +264,17 @@ a{
 
 .books{
     text-align: left;
-    background: #616161 !important;
+    background: #e5ac56 !important;
 }
 
 .socialnetworks{
     text-align: left;
-    background: #8e8e8e !important;
+    background: #cfe556 !important;
 }
 
 .recentwork{
     text-align: left;
-    background: #c3c3c3 !important;
+    background: #56c3e4 !important;
 }
 
 #tab:hover > a{
