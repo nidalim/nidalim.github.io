@@ -160,6 +160,7 @@ input[type="submit"] {
     text-decoration: none;
     color: #1d1d1d;
     display: block;
+    border: 1px solid black;
 }
 
 #header ul li a:hover {
@@ -182,6 +183,7 @@ input.text {
     background: #f530ff;
     overflow: hidden;
     border-radius: 5px;
+    border: 1px solid black;
 }
 
 #tab img{
@@ -237,6 +239,18 @@ a{
     color: rgba(255, 255, 255, 0) !important;
     background-color: #000000;
     background-image: url(../images/behance.svg);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.upwork{
+    color: rgba(255, 255, 255, 0) !important;
+    background-color: #ffffff;
+    background-image: url(../images/upwork.svg);
     background-size: 100px;
     background-repeat: no-repeat;
     background-position: center;
