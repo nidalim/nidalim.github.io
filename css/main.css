@@ -160,7 +160,6 @@ input[type="submit"] {
     text-decoration: none;
     color: #1d1d1d;
     display: block;
-    border: 1px solid black;
 }
 
 #header ul li a:hover {
@@ -183,7 +182,6 @@ input.text {
     background: #f530ff;
     overflow: hidden;
     border-radius: 5px;
-    border: 1px solid black;
 }
 
 #tab img{
@@ -278,17 +276,20 @@ a{
 
 .books{
     text-align: left;
-    background: #e5ac56 !important;
+    background: rgb(248,172,54) !important;
+    background: linear-gradient(0deg, rgba(248,172,54,1) 0%, rgba(252,198,114,1) 100%) !important;
 }
 
 .socialnetworks{
     text-align: left;
-    background: #cfe556 !important;
+    background: rgb(175,247,73) !important;
+background: linear-gradient(0deg, rgba(175,247,73,1) 0%, rgba(201,255,126,1) 100%) !important;
 }
 
 .recentwork{
     text-align: left;
-    background: #56c3e4 !important;
+    background: rgb(0,200,235) !important;
+    background: linear-gradient(0deg, rgba(0,200,235,1) 0%, rgba(122,235,255,1) 100%) !important;
 }
 
 #tab:hover > a{
