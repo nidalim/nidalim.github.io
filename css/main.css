@@ -179,7 +179,7 @@ input.text {
 
 #tab {
     margin: 10px;
-    background: #f530ff;
+    border: 1px solid black;
     overflow: hidden;
     border-radius: 5px;
 }
@@ -276,20 +276,17 @@ a{
 
 .books{
     text-align: left;
-    background: rgb(248,172,54) !important;
-    background: linear-gradient(0deg, rgba(248,172,54,1) 0%, rgba(252,198,114,1) 100%) !important;
+    border: 1px solid blue !important;
 }
 
 .socialnetworks{
     text-align: left;
-    background: rgb(175,247,73) !important;
-background: linear-gradient(0deg, rgba(175,247,73,1) 0%, rgba(201,255,126,1) 100%) !important;
+    border: 1px solid red !important;
 }
 
 .recentwork{
     text-align: left;
-    background: rgb(0,200,235) !important;
-    background: linear-gradient(0deg, rgba(0,200,235,1) 0%, rgba(122,235,255,1) 100%) !important;
+    border: 1px solid orange !important;
 }
 
 #tab:hover > a{
