@@ -75,7 +75,8 @@ html{
 
 [class*="col-"] {
     float: left;
-    padding: 15px;
+    display: table;
+    padding: 100px;
     /*border: 1px dashed #AF15B8;*/
 }
 
@@ -90,12 +91,16 @@ body {
     background: #ffffff;
     color: #000000;
     text-align: center;
+    height: 100%;
 }
 
 #wrapper {
-    max-width: 1200px;
-    text-align: left;
-    background-color: #ffffff;
+    /* max-width: 1200px; */
+    text-align: center;
+    background-color: #000000;
+    display: table;
+    height: 100%;
+    width: 100%;
 }
 
 h1 {
@@ -123,9 +128,11 @@ p {
 }
 
 #header {
-    text-align: left;
-    background: #ffffff;
-    padding-bottom: 0;
+    text-align: center;
+    /* background: #ffffff; */
+    /* padding-bottom: 0; */
+    display: table-cell;
+    vertical-align: middle;
 }
 
 form#search {
@@ -146,24 +153,30 @@ input[type="submit"] {
 }
 
 #header ul {
-    display: table;
+    display: table-cell;
     vertical-align: middle;
+    text-align: center;
 }
 
 #header ul li {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: left;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+    text-align: center;
+    padding: 10px;
+    width: 170px;
+    display: inline-block;
 }
 
 #header ul li a {
     text-decoration: none;
     color: #1d1d1d;
     display: block;
+    border: 1px solid #ffffff !important;
 }
 
 #header ul li a:hover {
     color: #AF15B8;
+    border: 1px solid green !important;
 }
 
 #footer {
