@@ -383,3 +383,9 @@ td {
     position: relative;
     bottom: 30px;
 }
+
+#baneri{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+}
