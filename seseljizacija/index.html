@@ -15,6 +15,6 @@ const btnName = document.getElementById('btn')
 btnName.onclick = function names() {
   var properties = Object.values(namesJson);
   var index = Math.floor(Math.random() * textArray.length);
-  document.getElementById("poruka").innerHTML = properties[index];
+  document.getElementById("poruka").innerHTML = textArray[index];
 }
 </script>
