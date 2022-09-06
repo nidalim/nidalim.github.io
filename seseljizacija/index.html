@@ -8,12 +8,13 @@
 
 <script>
 const namesJson = {"1": "мртвопувало", "2": "рашчепуља", "3": "жвалов", "4": "минџуша"};
+var textArray = ['мртвопувало','рашчепуља','жвалов','минџуша'];
 
 const btnName = document.getElementById('btn')
 
 btnName.onclick = function names() {
   var properties = Object.values(namesJson);
-  var index = Math.floor(Math.random() * properties.length);
+  var index = Math.floor(Math.random() * textArray.length);
   document.getElementById("poruka").innerHTML = properties[index];
 }
 </script>
