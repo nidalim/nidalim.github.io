@@ -1,1 +1,18 @@
+<script>const namesJson = {
+  "nombre1": "Raghat", 
+  "nombre2": "Uhmla",
+  "nombre3": "Borto"
+};
 
+const btnName = document.getElementById('btn')
+
+btnName.onclick = function names() {
+  var properties = Object.values(namesJson);
+  var index = Math.floor(Math.random() * properties.length);
+  document.getElementById("poruka").innerHTML = properties[index];
+}
+</script>
+
+<button type="button" id="btn">Seseljize</button>
+<h2>Ime:</h2>
+<div id="poruka"></div>
