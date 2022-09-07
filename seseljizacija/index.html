@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <head>
 <title>Шешељизација</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 </head>
 
 <body>
 
-<input type="checkbox" id="mus"></input> Мушко
-<input type="checkbox" id="zen"></input> Женско
+<!--container begin-->
+<div class="container-fluid">
+
+<!-- Jumbotron -->
+<div class="p-5 text-center bg-light">
+<h1 class="mb-3">Шешељизација</h1>
+</div>
+<!-- Jumbotron -->
+
+<div class="row justify-content-md-center">
+<div class="col col-lg-6">
+<form class="form-horizontal"><!--form begin-->
+
+<div class="form-group">
+<label for="mus" class="col-sm-2 control-label">Мушко</label>
+<div class="col-sm-10">
+<input class="checkbox" type="checkbox" id="mus"></input>
+</div>
+</div>
+<div class="form-group">
+<label for="zen" class="col-sm-2 control-label">Женско</label>
+<div class="col-sm-10">
+<input class="checkbox" type="checkbox" id="zen"></input>
+</div>
+</div>
+
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+<input type="text" class="form-control" id="ime" placeholder="Твоје име">
+</div>
+</div>
+
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
 
 <div style="display:none; color:red" id="chk_error">
 Изабери шта си
@@ -17,11 +52,39 @@
 Не може оба
 </div>
 
-<button type="button" id="btn">Шешељизе</button>
+</div>
+</div>
+
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+
+<button type="button" class="btn btn-default" id="btn">Шешељизе</button>
 <h2>Назив:</h2>
 <div id="pridev"></div>
 <div id="pridev2"></div>
 <div id="imenica"></div>
+<div id="ime2"></div>
+
+</div>
+</div>
+
+</form><!--form end-->
+</div><!--1st column-->
+
+<div class="col col-lg-6">
+
+<div class="card" style="width: 40rem; text-align:justify">
+<img class="card-img-top" src="C:\Users\milad\OneDrive\Desktop\seselj.png" alt="Card image cap">
+<div class="card-body">
+<p class="card-text">Војислав Шешељ српски је политичар, доктор правних наука, председник Српске радикалне странке и бивши народни посланик у Народној скупштини Републике Србије и Савезне скупштине СР Југославије, потпредседник Владе Републике Србије и председник општине Земун.</p>
+</div>
+</div>
+
+</div>
+
+</div><!--row-->
+
+</div><!--container end-->
 
 <script>
 
@@ -38,6 +101,12 @@ const btnName = document.getElementById('btn')
 
 //main begin
 btnName.onclick = function names() {
+
+//get ime
+var ime = $('#ime').val();
+console.log('ime:' + ime);
+//set ime
+$('#ime2').html(ime);
 
 //pol begin
 if($('#mus').is(':checked') && $('#zen').is(':checked')){
