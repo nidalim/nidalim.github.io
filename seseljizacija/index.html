@@ -24,7 +24,6 @@
 <div id="imenica"></div>
 
 <script>
-//const namesJson = {"1": "мртвопувало", "2": "рашчепуља", "3": "жвалов", "4": "минџуша"};
   
 var muskiPridevi = ['шлогирани','распали','ментално заостали','мајмунолики'];
 var zenskiPridevi = ['шлогирана','распала','курвињска','гадна'];
@@ -37,9 +36,10 @@ var zenskeImenice = ['рашчепуља','минџуша','гадура','см�
 
 const btnName = document.getElementById('btn')
 
+//main begin
 btnName.onclick = function names() {
-//var properties = Object.values(namesJson);
-  
+
+//pol begin
 if($('#mus').is(':checked') && $('#zen').is(':checked')){
   
 $("#pol_error").show();
@@ -48,6 +48,7 @@ $("#pol_error").show();
   
 $("#pol_error").hide();
   
+//musko begin
 if($('#mus').is(':checked')){
   
 $("#chk_error").hide();
@@ -65,7 +66,9 @@ document.getElementById("imenica").innerHTML = muskeImenice[index];
 {
 $("#chk_error").show();
 }
-
+//musko end
+  
+//zensko begin
 if($('#zen').is(':checked')){
   
 $("#chk_error").hide();
@@ -83,10 +86,11 @@ document.getElementById("imenica").innerHTML = zenskeImenice[index];
 {
 $("#chk_error").show();
 }
+//zensko end
   
-}//pol
+}//pol end
   
-}//main
+}//main end
 </script>
 </body>
 </html>
