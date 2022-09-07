@@ -10,6 +10,10 @@
 <input type="checkbox" id="mus"></input> Мушко
 <input type="checkbox" id="zen"></input> Женско
 
+<div style="display:none; color:red" id="chk_error">
+Изаберите пол
+</div>
+
 <button type="button" id="btn">Шешељизе</button>
 <h2>Назив:</h2>
 <div id="pridev"></div>
@@ -32,7 +36,15 @@ const btnName = document.getElementById('btn')
 
 btnName.onclick = function names() {
 //var properties = Object.values(namesJson);
-  
+
+if(!$("#mus").prop("checked"))
+{
+$("#chk_error").show();
+}
+else
+{
+$("#_chk_error").hide();
+}
 
 if($('#mus').is(':checked')){
   
