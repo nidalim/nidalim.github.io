@@ -13,15 +13,20 @@
 <button type="button" id="btn">Шешељизе</button>
 <h2>Назив:</h2>
 <div id="pridev"></div>
+<div id="pridev2"></div>
 <div id="imenica"></div>
 
 <script>
 //const namesJson = {"1": "мртвопувало", "2": "рашчепуља", "3": "жвалов", "4": "минџуша"};
-var muskeImenice = ['мртвопувало','жвалов'];
-var zenskeImenice = ['рашчепуља','минџуша'];
   
-var muskiPridevi = ['шлогирани','распали'];
-var zenskiPridevi = ['шлогирана','распала'];
+var muskiPridevi = ['шлогирани','распали','ментално заостали','мајмунолики'];
+var zenskiPridevi = ['шлогирана','распала','курвињска','гадна'];
+  
+var muskiPridevi2 = ['усташки','удбашки','амерички','глобалистички'];
+var zenskiPridevi2 = ['усташка','удбашка','америчка','глобалистичка'];
+
+var muskeImenice = ['пацов','жвалов','пичкопаћеник','смрдљов'];
+var zenskeImenice = ['рашчепуља','минџуша','гадура','смрадура'];
 
 const btnName = document.getElementById('btn')
 
@@ -34,6 +39,9 @@ if($('#mus').is(':checked')){
 var index = Math.floor(Math.random() * muskiPridevi.length);
 document.getElementById("pridev").innerHTML = muskiPridevi[index];
   
+var index = Math.floor(Math.random() * muskiPridevi2.length);
+document.getElementById("pridev2").innerHTML = muskiPridevi2[index];
+  
 var index = Math.floor(Math.random() * muskeImenice.length);
 document.getElementById("imenica").innerHTML = muskeImenice[index];
   
@@ -43,6 +51,9 @@ if($('#zen').is(':checked')){
 
 var index = Math.floor(Math.random() * zenskiPridevi.length);
 document.getElementById("pridev").innerHTML = zenskiPridevi[index];
+  
+var index = Math.floor(Math.random() * zenskiPridevi2.length);
+document.getElementById("pridev2").innerHTML = zenskiPridevi2[index];
   
 var index = Math.floor(Math.random() * zenskeImenice.length);
 document.getElementById("imenica").innerHTML = zenskeImenice[index];
