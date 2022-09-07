@@ -13,6 +13,9 @@
 <div style="display:none; color:red" id="chk_error">
 Изаберите пол
 </div>
+<div style="display:none; color:red" id="pol_error">
+Тхере аре онлу тво джендерс
+</div>
 
 <button type="button" id="btn">Шешељизе</button>
 <h2>Назив:</h2>
@@ -36,10 +39,14 @@ const btnName = document.getElementById('btn')
 
 btnName.onclick = function names() {
 //var properties = Object.values(namesJson);
+  
+if($('#mus').is(':checked') && $('#zen').is(':checked')){
+$("#pol_error").show();
+}
 
 if($('#mus').is(':checked')){
   
-$("#_chk_error").hide();
+$("#chk_error").hide();
   
 var index = Math.floor(Math.random() * muskiPridevi.length);
 document.getElementById("pridev").innerHTML = muskiPridevi[index];
@@ -52,7 +59,7 @@ document.getElementById("imenica").innerHTML = muskeImenice[index];
   
 }else
 {
-$("#_chk_error").show();
+$("#chk_error").show();
 }
 
 if($('#zen').is(':checked')){
