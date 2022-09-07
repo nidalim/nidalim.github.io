@@ -6,20 +6,39 @@
 </head>
 
 <body>
+  
+<input type="checkbox" id="mus"></input> Мушко
+<input type="checkbox" id="zen"></input> Женско
+
 <button type="button" id="btn">Шешељизе</button>
 <h2>Назив:</h2>
 <div id="poruka"></div>
 
 <script>
 //const namesJson = {"1": "мртвопувало", "2": "рашчепуља", "3": "жвалов", "4": "минџуша"};
-var textArray = ['мртвопувало','рашчепуља','жвалов','минџуша'];
+var muskeImenice = ['мртвопувало','жвалов'];
+var zenskeImenice = ['рашчепуља','минџуша'];
 
 const btnName = document.getElementById('btn')
 
 btnName.onclick = function names() {
 //var properties = Object.values(namesJson);
-var index = Math.floor(Math.random() * textArray.length);
-document.getElementById("poruka").innerHTML = textArray[index];
+  
+
+if($('#mus').is(':checked')){
+  
+var index = Math.floor(Math.random() * muskeImenice.length);
+document.getElementById("poruka").innerHTML = muskeImenice[index];
+  
+}
+
+if($('#zen').is(':checked')){
+  
+var index = Math.floor(Math.random() * zenskeImenice.length);
+document.getElementById("poruka").innerHTML = zenskeImenice[index];
+  
+}
+  
 }
 </script>
 </body>
