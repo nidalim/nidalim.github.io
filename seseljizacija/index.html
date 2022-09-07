@@ -12,12 +12,16 @@
 
 <button type="button" id="btn">Шешељизе</button>
 <h2>Назив:</h2>
-<div id="poruka"></div>
+<div id="pridev"></div>
+<div id="imenica"></div>
 
 <script>
 //const namesJson = {"1": "мртвопувало", "2": "рашчепуља", "3": "жвалов", "4": "минџуша"};
 var muskeImenice = ['мртвопувало','жвалов'];
 var zenskeImenice = ['рашчепуља','минџуша'];
+  
+var muskiPridevi = ['шлогирани','распали'];
+var zenskiPridevi = ['шлогирана','распала'];
 
 const btnName = document.getElementById('btn')
 
@@ -27,15 +31,21 @@ btnName.onclick = function names() {
 
 if($('#mus').is(':checked')){
   
+var index = Math.floor(Math.random() * muskiPridevi.length);
+document.getElementById("pridev").innerHTML = muskiPridevi[index];
+  
 var index = Math.floor(Math.random() * muskeImenice.length);
-document.getElementById("poruka").innerHTML = muskeImenice[index];
+document.getElementById("imenica").innerHTML = muskeImenice[index];
   
 }
 
 if($('#zen').is(':checked')){
+
+var index = Math.floor(Math.random() * zenskiPridevi.length);
+document.getElementById("pridev").innerHTML = zenskiPridevi[index];
   
 var index = Math.floor(Math.random() * zenskeImenice.length);
-document.getElementById("poruka").innerHTML = zenskeImenice[index];
+document.getElementById("imenica").innerHTML = zenskeImenice[index];
   
 }
   
