@@ -37,16 +37,9 @@ const btnName = document.getElementById('btn')
 btnName.onclick = function names() {
 //var properties = Object.values(namesJson);
 
-if(!$("#mus").prop("checked"))
-{
-$("#chk_error").show();
-}
-else
-{
-$("#_chk_error").hide();
-}
-
 if($('#mus').is(':checked')){
+  
+$("#_chk_error").hide();
   
 var index = Math.floor(Math.random() * muskiPridevi.length);
 document.getElementById("pridev").innerHTML = muskiPridevi[index];
@@ -57,9 +50,14 @@ document.getElementById("pridev2").innerHTML = muskiPridevi2[index];
 var index = Math.floor(Math.random() * muskeImenice.length);
 document.getElementById("imenica").innerHTML = muskeImenice[index];
   
+}else
+{
+$("#_chk_error").show();
 }
 
 if($('#zen').is(':checked')){
+  
+$("#_chk_error").hide();
 
 var index = Math.floor(Math.random() * zenskiPridevi.length);
 document.getElementById("pridev").innerHTML = zenskiPridevi[index];
@@ -70,6 +68,9 @@ document.getElementById("pridev2").innerHTML = zenskiPridevi2[index];
 var index = Math.floor(Math.random() * zenskeImenice.length);
 document.getElementById("imenica").innerHTML = zenskeImenice[index];
   
+}else
+{
+$("#_chk_error").show();
 }
   
 }
