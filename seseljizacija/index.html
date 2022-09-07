@@ -40,10 +40,14 @@ const btnName = document.getElementById('btn')
 btnName.onclick = function names() {
 //var properties = Object.values(namesJson);
   
-if(!$('#mus').is(':checked') && !$('#zen').is(':checked')){
+if($('#mus').is(':checked') && $('#zen').is(':checked')){
+  
+$("#pol_error").show();
+  
+}else{
   
 $("#pol_error").hide();
-
+  
 if($('#mus').is(':checked')){
   
 $("#chk_error").hide();
@@ -80,10 +84,7 @@ document.getElementById("imenica").innerHTML = zenskeImenice[index];
 $("#chk_error").show();
 }
   
-}else
-{
-$("#pol_error").show();
-}
+}//pol
   
 }//main
 </script>
