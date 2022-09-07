@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  
+
 <input type="checkbox" id="mus"></input> Мушко
 <input type="checkbox" id="zen"></input> Женско
 
@@ -24,10 +24,10 @@
 <div id="imenica"></div>
 
 <script>
-  
+
 var muskiPridevi = ['шлогирани','распали','ментално заостали','мајмунолики'];
 var zenskiPridevi = ['шлогирана','распала','курвињска','гадна'];
-  
+
 var muskiPridevi2 = ['усташки','удбашки','амерички','глобалистички'];
 var zenskiPridevi2 = ['усташка','удбашка','америчка','глобалистичка'];
 
@@ -41,55 +41,51 @@ btnName.onclick = function names() {
 
 //pol begin
 if($('#mus').is(':checked') && $('#zen').is(':checked')){
-  
+
 $("#pol_error").show();
-  
+
 }else{
-  
+
 $("#pol_error").hide();
-  
+
 //musko begin
 if($('#mus').is(':checked')){
-  
+
 $("#chk_error").hide();
-  
+
 var index = Math.floor(Math.random() * muskiPridevi.length);
 document.getElementById("pridev").innerHTML = muskiPridevi[index];
-  
+
 var index = Math.floor(Math.random() * muskiPridevi2.length);
 document.getElementById("pridev2").innerHTML = muskiPridevi2[index];
-  
+
 var index = Math.floor(Math.random() * muskeImenice.length);
 document.getElementById("imenica").innerHTML = muskeImenice[index];
-  
-}else
-{
-$("#chk_error").show();
+
 }
 //musko end
-  
 //zensko begin
-if($('#zen').is(':checked')){
-  
+else if($('#zen').is(':checked')){
+
 $("#chk_error").hide();
 
 var index = Math.floor(Math.random() * zenskiPridevi.length);
 document.getElementById("pridev").innerHTML = zenskiPridevi[index];
-  
+
 var index = Math.floor(Math.random() * zenskiPridevi2.length);
 document.getElementById("pridev2").innerHTML = zenskiPridevi2[index];
-  
+
 var index = Math.floor(Math.random() * zenskeImenice.length);
 document.getElementById("imenica").innerHTML = zenskeImenice[index];
-  
+
 }else
 {
 $("#chk_error").show();
 }
 //zensko end
-  
+
 }//pol end
-  
+
 }//main end
 </script>
 </body>
