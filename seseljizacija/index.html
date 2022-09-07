@@ -11,10 +11,10 @@
 <input type="checkbox" id="zen"></input> Женско
 
 <div style="display:none; color:red" id="chk_error">
-Изаберите пол
+Изабери шта си
 </div>
 <div style="display:none; color:red" id="pol_error">
-Тхере аре онлу тво джендерс
+Не може оба
 </div>
 
 <button type="button" id="btn">Шешељизе</button>
@@ -40,9 +40,9 @@ const btnName = document.getElementById('btn')
 btnName.onclick = function names() {
 //var properties = Object.values(namesJson);
   
-if($('#mus').is(':checked') && $('#zen').is(':checked')){
-$("#pol_error").show();
-}
+if(!$('#mus').is(':checked') && !$('#zen').is(':checked')){
+  
+$("#pol_error").hide();
 
 if($('#mus').is(':checked')){
   
@@ -64,7 +64,7 @@ $("#chk_error").show();
 
 if($('#zen').is(':checked')){
   
-$("#_chk_error").hide();
+$("#chk_error").hide();
 
 var index = Math.floor(Math.random() * zenskiPridevi.length);
 document.getElementById("pridev").innerHTML = zenskiPridevi[index];
@@ -77,10 +77,15 @@ document.getElementById("imenica").innerHTML = zenskeImenice[index];
   
 }else
 {
-$("#_chk_error").show();
+$("#chk_error").show();
 }
   
+}else
+{
+$("#pol_error").show();
 }
+  
+}//main
 </script>
 </body>
 </html>
