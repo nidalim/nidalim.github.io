@@ -1,121 +1,206 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
-    <!-- <meta http-equiv="refresh" content="30"> Auto refresh every 3 seconds -->
-    <title>Miladin GitHub Page</title>
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
-    <style type="text/css" media="screen">
-    @import "css/reset.css";
-    @import "css/normalize.min.css";
-    @import "css/main.css";
-    </style>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
-    <!-- <script type="text/javascript" src="js/angular.min.js"></script> -->
-    <script type="text/javascript" src="js/main.js"></script>
-    <style>
-    @media screen and (max-width: 1280px) {}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Miladin - Portfolio</title>
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-    @media screen and (max-width: 1024px) {}
+            body {
+                background-color: #000000;
+                color: white;
+                font-family: "Arial", sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                flex-direction: column;
+            }
 
-    @media screen and (max-width: 800px) {
-        .col-10 {
-            width: 100%;
-            padding: 15px 20px 15px 0px;
-        }
-        #header ul li {
-            /*padding-top: 20px;
-            padding-bottom: 0px;
-            padding-right: 20px;*/
-        }
-        .col-2 {
-            width: 100%;
-            padding: 15px 15px 15px 10px;
-        }
-        #footer {
-            text-align: center;
-        }
-    }
+            .container {
+                position: relative;
+                width: 300px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-    @media screen and (max-width: 768px) {}
+            .logo-link {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                text-decoration: none;
+            }
 
-    @media screen and (max-width: 720px) {}
+            /* Brand-specific backgrounds */
+            .trailhead-link {
+                background-color: #8c745f;
+            }
 
-    @media screen and (max-width: 600px) {
-        #footer {
-            text-align: center;
-        }
-    }
+            .github-link {
+                background-color: #ffffff;
+            }
 
-    @media screen and (max-width: 480px) {}
+            .linkedin-link {
+                background-color: #0077b5;
+            }
 
-    @media screen and (max-width: 320px) {
-        #header ul li {
-            padding-right: 10px;
-        }
-        .col-12 {
-            width: 100%;
-            padding: 0px;
-        }
-    }
+            .logo-link:hover {
+                transform: scale(1.1);
+            }
 
-    @media screen and (max-width: 240px) {}
-    </style>
-    <style type="text/css">
-    @-moz-document url-prefix() {
-        #side {}
-    }
-    </style>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            .trailhead-link:hover {
+                box-shadow: 0 0 20px rgba(0, 161, 224, 0.6);
+            }
 
-    <meta name="DC.title" content="Title here">
-    <meta name="DC.subject" content="Keywords here">
-    <meta name="DC.description" content="Description here">
-    <meta name="DC.format" content="text/html">
-    <meta name="DC.publisher" content="Publisher here">
-    <meta name="author" content="Miladin">
-    <meta name="revisit-after" content="3">
-    <meta name="DC.language" content="en">
-    <meta name="copyright" content="© Miladin">
-    <meta name="robots" content="All">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="theme-color" content="#000000">
-</head>
+            .github-link:hover {
+                box-shadow: 0 0 20px rgba(36, 41, 46, 0.6);
+            }
 
-<body>
-    <div id="wrapper">
-        <div class="row" style="display: table-cell;
-            vertical-align: middle;"
-            <div id="header" class="col-12">
-                
-                <div class="col-12">
-                    <ul>
-                        
-                        <!--<li><a class="github" href="https://github.com/nidalim">Github</a></li>-->
-                        <li><a class="trailblazer" href="https://trailblazer.me/id/miladin">Trailhead</a></li>
+            .linkedin-link:hover {
+                box-shadow: 0 0 20px rgba(0, 119, 181, 0.6);
+            }
 
-                    </ul>
-                </div>                                              
+            /* Position logos in a circle */
+            .trailhead-link {
+                transform: translateY(-120px);
+            }
+
+            .github-link {
+                transform: translateX(104px) translateY(60px);
+            }
+
+            .linkedin-link {
+                transform: translateX(-104px) translateY(60px);
+            }
+
+            .trailhead-link:hover {
+                transform: translateY(-120px) scale(1.1);
+            }
+
+            .github-link:hover {
+                transform: translateX(104px) translateY(60px) scale(1.1);
+            }
+
+            .linkedin-link:hover {
+                transform: translateX(-104px) translateY(60px) scale(1.1);
+            }
+
+            .trailhead-logo {
+                width: 50px;
+                height: 50px;
+                background-image: url("images/trailblazer.webp");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .github-logo {
+                width: 30px;
+                height: 30px;
+                background-image: url("images/github.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .linkedin-logo {
+                width: 50px;
+                height: 50px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .linkedin-logo::before {
+                content: "in";
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                font-family: Arial, sans-serif;
+                text-decoration: none;
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    width: 250px;
+                    height: 250px;
+                }
+
+                .trailhead-link {
+                    transform: translateY(-100px);
+                }
+
+                .github-link {
+                    transform: translateX(87px) translateY(50px);
+                }
+
+                .linkedin-link {
+                    transform: translateX(-87px) translateY(50px);
+                }
+
+                .trailhead-link:hover {
+                    transform: translateY(-100px) scale(1.1);
+                }
+
+                .github-link:hover {
+                    transform: translateX(87px) translateY(50px) scale(1.1);
+                }
+
+                .linkedin-link:hover {
+                    transform: translateX(-87px) translateY(50px) scale(1.1);
+                }
+
+                .trailhead-logo,
+                .github-logo,
+                .linkedin-logo {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .logo-link {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <a
+                href="https://trailblazer.me/id/miladin"
+                class="logo-link trailhead-link"
+                target="_blank"
+            >
+                <div class="trailhead-logo"></div>
+            </a>
+            <a
+                href="https://github.com/nidalim"
+                class="logo-link github-link"
+                target="_blank"
+            >
+                <div class="github-logo"></div>
+            </a>
+            <a
+                href="https://www.linkedin.com/in/nidalim/"
+                class="logo-link linkedin-link"
+                target="_blank"
+            >
+                <div class="linkedin-logo"></div>
+            </a>
         </div>
-    
-    <!-- Start of LiveChat (www.livechatinc.com) code -->
-<script>
-    window.__lc = window.__lc || {};
-    window.__lc.license = 13418553;
-    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-</script>
-<noscript><a href="https://www.livechatinc.com/chat-with/13418553/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-<!-- End of LiveChat code -->
-
-        
-    </div>
-
-<script>
-</script>
-
-</body></html>
+    </body>
+</html>
