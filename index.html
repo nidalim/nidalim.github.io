@@ -3,8 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Miladin - Portfolio</title>
+        <title>Miladin - Links</title>
         <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
         <style>
             * {
                 margin: 0;
@@ -12,195 +16,313 @@
                 box-sizing: border-box;
             }
 
+            html,
             body {
-                background-color: #000000;
-                color: white;
-                font-family: "Arial", sans-serif;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background: #11151d;
+                font-family: "Montserrat", -apple-system, BlinkMacSystemFont,
+                    sans-serif;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                min-height: 100vh;
-                flex-direction: column;
+                position: relative;
+                color: white;
             }
 
             .container {
-                position: relative;
-                width: 300px;
-                height: 300px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .logo-link {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                text-decoration: none;
-            }
-
-            /* Brand-specific backgrounds */
-            .trailhead-link {
-                background-color: #8c745f;
-            }
-
-            .github-link {
-                background-color: #ffffff;
-            }
-
-            .linkedin-link {
-                background-color: #0077b5;
-            }
-
-            .logo-link:hover {
-                transform: scale(1.1);
-            }
-
-            .trailhead-link:hover {
-                box-shadow: 0 0 20px rgba(0, 161, 224, 0.6);
-            }
-
-            .github-link:hover {
-                box-shadow: 0 0 20px rgba(36, 41, 46, 0.6);
-            }
-
-            .linkedin-link:hover {
-                box-shadow: 0 0 20px rgba(0, 119, 181, 0.6);
-            }
-
-            /* Position logos in a circle */
-            .trailhead-link {
-                transform: translateY(-120px);
-            }
-
-            .github-link {
-                transform: translateX(104px) translateY(60px);
-            }
-
-            .linkedin-link {
-                transform: translateX(-104px) translateY(60px);
-            }
-
-            .trailhead-link:hover {
-                transform: translateY(-120px) scale(1.1);
-            }
-
-            .github-link:hover {
-                transform: translateX(104px) translateY(60px) scale(1.1);
-            }
-
-            .linkedin-link:hover {
-                transform: translateX(-104px) translateY(60px) scale(1.1);
-            }
-
-            .trailhead-logo {
-                width: 50px;
-                height: 50px;
-                background-image: url("images/trailblazer.webp");
-                background-size: contain;
+                background-image: url(images/profile.jpeg);
                 background-repeat: no-repeat;
                 background-position: center;
-            }
-
-            .github-logo {
-                width: 30px;
-                height: 30px;
-                background-image: url("images/github.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-            .linkedin-logo {
-                width: 50px;
-                height: 50px;
-                position: relative;
+                background-size: cover;
+                filter: sepia(100%) hue-rotate(164deg) saturate(300%)
+                    brightness(0.9);
+                z-index: 10;
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
                 align-items: center;
+                gap: 32px;
+                padding: 48px 32px;
+                backdrop-filter: blur(24px);
+                border-radius: 24px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                width: 90%;
             }
 
-            .linkedin-logo::before {
-                content: "in";
+            .profile-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .profile-image {
+                width: 420px;
+                height: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 3rem;
+                font-weight: 700;
                 color: white;
-                font-weight: bold;
-                font-size: 20px;
-                font-family: Arial, sans-serif;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .profile-pic {
+                height: 100%;
+                border-radius: 50%;
+                filter: opacity(0.1);
+                transition: filter 0.3s ease;
+            }
+
+            .profile-name {
+                font-size: 2rem;
+                text-align: center;
+                font-weight: 600;
+                color: #f8fafc;
+                margin-bottom: 8px;
+            }
+
+            .profile-subtitle {
+                font-size: 0.95rem;
+                color: rgba(203, 213, 225, 0.8);
+                font-weight: 400;
+                text-align: center;
+                line-height: 1.4;
+            }
+
+            .links-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+            }
+
+            .glass-card {
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                backdrop-filter: blur(16px);
+                border-radius: 16px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
                 text-decoration: none;
+                color: white;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .glass-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.1),
+                    transparent
+                );
+                transition: left 0.6s ease;
+            }
+
+            .glass-card:hover::before {
+                left: 100%;
+            }
+
+            .glass-card:hover {
+                transform: translateY(-2px);
+                background: rgba(30, 41, 59, 0.7);
+                border-color: rgba(255, 255, 255, 0.15);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+
+            .card-icon {
+                width: 48px;
+                height: 48px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 16px;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: white;
+                flex-shrink: 0;
+            }
+
+            .card-content {
+                flex: 1;
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: 4px;
+                color: #f8fafc;
+            }
+
+            .card-description {
+                font-size: 0.85rem;
+                color: rgba(203, 213, 225, 0.7);
+                line-height: 1.3;
+            }
+
+            .card-arrow {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.8rem;
+                margin-left: 12px;
+                transition: all 0.3s ease;
+            }
+
+            .glass-card:hover .card-arrow {
+                background: rgba(255, 255, 255, 0.2);
+                transform: translateX(2px);
+            }
+
+            /* Brand specific colors */
+            .trailhead-card .card-icon {
+                background: #00a1e0;
+            }
+
+            .github-card .card-icon {
+                background: #24292e;
+            }
+
+            .linkedin-card .card-icon {
+                background: #0077b5;
+            }
+
+            /* Floating particles */
+            .particle {
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: rgba(59, 130, 246, 0.6);
+                border-radius: 50%;
+                animation: particleDrift 20s linear infinite;
+            }
+
+            @keyframes particleDrift {
+                0% {
+                    transform: translateY(100vh) translateX(0) rotate(0deg);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                90% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100vh) translateX(100px)
+                        rotate(360deg);
+                    opacity: 0;
+                }
             }
 
             @media (max-width: 768px) {
                 .container {
-                    width: 250px;
-                    height: 250px;
+                    padding: 40px 24px;
+                    gap: 28px;
                 }
 
-                .trailhead-link {
-                    transform: translateY(-100px);
+                .profile-image {
+                    width: 100px;
+                    height: 100px;
+                    font-size: 2.5rem;
                 }
 
-                .github-link {
-                    transform: translateX(87px) translateY(50px);
+                .profile-name {
+                    font-size: 1.75rem;
                 }
 
-                .linkedin-link {
-                    transform: translateX(-87px) translateY(50px);
+                .glass-card {
+                    padding: 18px;
                 }
 
-                .trailhead-link:hover {
-                    transform: translateY(-100px) scale(1.1);
-                }
-
-                .github-link:hover {
-                    transform: translateX(87px) translateY(50px) scale(1.1);
-                }
-
-                .linkedin-link:hover {
-                    transform: translateX(-87px) translateY(50px) scale(1.1);
-                }
-
-                .trailhead-logo,
-                .github-logo,
-                .linkedin-logo {
-                    width: 40px;
-                    height: 40px;
-                }
-
-                .logo-link {
-                    width: 70px;
-                    height: 70px;
+                .card-icon {
+                    width: 44px;
+                    height: 44px;
+                    margin-right: 14px;
                 }
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <a
-                href="https://trailblazer.me/id/miladin"
-                class="logo-link trailhead-link"
-                target="_blank"
-            >
-                <div class="trailhead-logo"></div>
-            </a>
-            <a
-                href="https://github.com/nidalim"
-                class="logo-link github-link"
-                target="_blank"
-            >
-                <div class="github-logo"></div>
-            </a>
-            <a
-                href="https://www.linkedin.com/in/nidalim/"
-                class="logo-link linkedin-link"
-                target="_blank"
-            >
-                <div class="linkedin-logo"></div>
-            </a>
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img class="profile-pic" src="images/profile.jpeg" alt="" />
+                </div>
+                <div>
+                    <h1 class="profile-name">Miladin</h1>
+                    <p class="profile-subtitle">
+                        Developer & Technology Enthusiast
+                    </p>
+                </div>
+            </div>
+
+            <div class="links-grid">
+                <a
+                    href="https://trailblazer.me/id/miladin"
+                    class="glass-card trailhead-card"
+                    target="_blank"
+                >
+                    <div class="card-icon">SF</div>
+                    <div class="card-content">
+                        <div class="card-title">Trailhead</div>
+                        <div class="card-description">
+                            Salesforce learning journey
+                        </div>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a
+                    href="https://github.com/nidalim"
+                    class="glass-card github-card"
+                    target="_blank"
+                >
+                    <div class="card-icon">GH</div>
+                    <div class="card-content">
+                        <div class="card-title">GitHub</div>
+                        <div class="card-description">
+                            Code repositories & projects
+                        </div>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/nidalim/"
+                    class="glass-card linkedin-card"
+                    target="_blank"
+                >
+                    <div class="card-icon">in</div>
+                    <div class="card-content">
+                        <div class="card-title">LinkedIn</div>
+                        <div class="card-description">
+                            Professional network & career
+                        </div>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </a>
+            </div>
         </div>
     </body>
 </html>
